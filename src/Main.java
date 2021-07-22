@@ -1,6 +1,6 @@
 import java.util.Random;
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Main {
     public static void main(String[] args) {
@@ -35,7 +35,9 @@ public class Main {
         generalAverage += calc3.getAverage();
         generalAverage += calc4.getAverage();
         generalAverage = generalAverage / 4;
-        System.out.println(generalAverage);
+
+        Logger logger = Logger.getLogger(Main.class.getName());
+        logger.log(Level.INFO, "Среднее значение: " + generalAverage);
 
 
     }
