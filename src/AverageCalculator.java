@@ -11,7 +11,7 @@ public class AverageCalculator implements Runnable {
     }
 
     @Override
-    public synchronized void run() {
+    public void run() {
         int countOfNumbers = endIndex - startIndex - 1;
         int sumOfNumbers = 0;
         for (int i = startIndex; i < endIndex; i++) {
